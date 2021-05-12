@@ -2,7 +2,14 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary': 'var(--primary-navy)',
+        'primary-navy': 'var(--primary-navy)',
+        'primary-blue': 'var(--primary-blue)',
+        'primary-gold': 'var(--primary-gold)'
+      }
+    },
   },
   variants: {
     extend: {},
