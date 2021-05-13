@@ -1,16 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-export type NpButtonType = 'primary' | 'default' | 'spec' | null;
+export type NpButtonType = 'stroked' | 'flat' | 'spec' | null;
 
 @Component({
   selector: 'button[np-button], a[np-button]',
   exportAs: 'npButton',
   template: `
-    <ng-content></ng-content>
+    <span>
+      <ng-content></ng-content>
+    </span>
   `,
   host: {
-    '[class.np-btn-primary]': `npType === 'primary'`,
-    '[class.np-btn-default]': `npType === 'default'`,
+    '[class.np-btn]': 'true',
+    '[class.np-btn-flat]': `npType === 'flat'`,
+    '[class.np-btn-stroked]': `npType === 'stroked'`,
     '[class.np-btn-spec]': `npType === 'spec'`
   }
 })
