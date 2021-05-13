@@ -1,9 +1,51 @@
 :root {
   --primary-navy: #002247;
-  --primary-blue: #007BC3;
-  --primary-gold: #E3B449;
+  --primary-blue: #007bc3;
+  --primary-gold: #e3b449;
+
+  --secondary-50: #e4eaf0;
+  --secondary-200: #bfcddb;
+  --secondary-400: #6f95c0;
+  --secondary-600: #2c609a;
+  --secondary-800: #0c3664;
+
+  --secondary-gradient-from: #0c3664;
+  --secondary-gradient-to: #2c609a;
+
+  --grayscale-50: #f8f9fa;
+  --grayscale-200: #d1d2d4;
+  --grayscale-400: #b8b8b8;
+  --grayscale-600: #929394;
+  --grayscale-800: #424242;
+
+  --periwinkle: #4983ff;
+  --orange: #f86400;
+  --red: #fa0057;
+  --green: #719a4b;
+  --error: var(--red);
 }
 
 $primary-navy: var(--primary-navy);
 $primary-blue: var(--primary-blue);
 $primary-gold: var(--primary-gold);
+
+$secondary-50: var(--secondary-50);
+$secondary-200: var(--secondary-200);
+$secondary-400: var(--secondary-400);
+$secondary-600: var(--secondary-600);
+$secondary-800: var(--secondary-800);
+
+$secondary-gradient-from: var(--secondary-gradient-from);
+$secondary-gradient-to: var(--secondary-gradient-to);
+
+$grayscale-50: var(--grayscale-50);
+$grayscale-200: var(--grayscale-200);
+$grayscale-400: var(--grayscale-400);
+$grayscale-600: var(--grayscale-600);
+$grayscale-800: var(--grayscale-800);
+
+$periwinkle: var(--periwinkle);
+$orange: var(--orange);
+$red: var(--red);
+$green: var(--green);
+$error: var(--error);
