@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@np/client-ui": ["libs/client-ui/src/index.ts"],
+      "@np/client-ui/*": ["libs/client-ui/src/lib/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
