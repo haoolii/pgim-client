@@ -1,1 +1,1 @@
-export * from './lib/client-ui.module';
+export * from './lib';

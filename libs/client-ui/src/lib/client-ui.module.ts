@@ -9,10 +9,11 @@ import { ProgressModule } from './progress/progress.module';
 import { PageHeaderModule } from './page-header/page-header.module';
 import { PageFooterModule } from './page-footer/page-footer.module';
 import { I18nModule } from './i18n/i18n.module';
+import { DountChartModule } from './dount-chart/dount-chart.module';
 
 @NgModule({
-  imports: [CommonModule, ButtonModule, ModalModule, RadioModule, CheckboxModule, IconModule, ProgressModule, PageHeaderModule, PageFooterModule, I18nModule],
+  imports: [CommonModule, ButtonModule, ModalModule, RadioModule, CheckboxModule, IconModule, ProgressModule, PageHeaderModule, PageFooterModule, I18nModule, DountChartModule],
   declarations: [],
-  exports: [ButtonModule]
+  exports: []
 })
 export class ClientUiModule {}
