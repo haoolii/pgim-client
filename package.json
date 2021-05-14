@@ -58,6 +58,7 @@
     "@nrwl/storybook": "^12.3.0-rc.1",
     "@nrwl/tao": "12.2.0",
     "@nrwl/workspace": "12.2.0",
+    "@schematics/angular": "^12.0.0",
     "@storybook/addon-actions": "^6.3.0-alpha.24",
     "@storybook/addon-knobs": "^6.3.0-alpha.21",
     "@storybook/angular": "^6.3.0-alpha.24",
