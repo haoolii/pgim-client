@@ -168,6 +168,89 @@
           }
         }
       }
+    },
+    "client-ui": {
+      "projectType": "library",
+      "root": "libs/client-ui",
+      "sourceRoot": "libs/client-ui/src",
+      "prefix": "np",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/client-ui/tsconfig.lib.json",
+              "libs/client-ui/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/client-ui/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/client-ui"],
+          "options": {
+            "jestConfig": "libs/client-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "storybook": {
+          "builder": "@nrwl/storybook:storybook",
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "port": 4400,
+            "config": {
+              "configFolder": "libs/client-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        },
+        "build-storybook": {
+          "builder": "@nrwl/storybook:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "uiFramework": "@storybook/angular",
+            "outputPath": "dist/storybook/client-ui",
+            "config": {
+              "configFolder": "libs/client-ui/.storybook"
+            }
+          },
+          "configurations": {
+            "ci": {
+              "quiet": true
+            }
+          }
+        }
+      }
+    },
+    "client-ui-e2e": {
+      "root": "apps/client-ui-e2e",
+      "sourceRoot": "apps/client-ui-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/client-ui-e2e/cypress.json",
+            "tsConfig": "apps/client-ui-e2e/tsconfig.e2e.json",
+            "devServerTarget": "client-ui:storybook"
+          },
+          "configurations": {
+            "ci": {
+              "devServerTarget": "client-ui:storybook:ci"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/client-ui-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
     }
   }
 }
